@@ -1,0 +1,220 @@
+@font-face {
+    font-family: opf;
+    src: url(/font/one\ piece\ font.ttf);
+}
+@font-face {
+    font-family: karla;
+    src: url(/font/Karla-Italic-VariableFont_wght.ttf);
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    
+}
+body{
+  background: #FFEFBA;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #FFFFFF, #FFEFBA);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #FFFFFF, #FFEFBA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+/* this is for navigation */
+
+header{
+    display: flex;
+    width: 100%;
+    background-color: #d53633;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 100px;
+    height: 50px;
+    
+}
+.logo{
+    font-family: opf;
+    letter-spacing: 1px;
+    color: white;
+    margin-left: -173px;
+    font-weight: bolder;
+    font-size: 40px;
+}
+.navigationbar ul{
+    display: flex;
+    list-style-type: none;
+}
+.navigationbar ul li a{
+    display: block;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: 0.2s;
+    margin:0 5px ;
+    padding: 10px 25px;
+    font-family: karla;
+    font-size: large;
+    font-weight: 900;
+
+}
+.navigationbar ul li a:hover{
+    background-color: black;
+}
+.navigationbar ul li a.active{
+    background-color: black;
+}
+/* CSS styles for the layout */
+
+/* Centered heading */
+h1 {
+    font-family: opf;
+    text-align: center;
+    font-size: 50px;
+    font-weight: bolder;
+  }
+  
+  /* Main container */
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    height: auto;
+  }
+  
+  /* First flex container */
+  .flex-container-1 {
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: center;
+  }
+  .flex-container-1 .box-1 img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+  }
+  
+  /* Flex box items in first container */
+  .box-1 {
+    position: relative;
+    top: 30px;
+  
+    width: 300px;
+    height: 625px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow:hidden;
+    background-color: #d53633;
+  }
+  
+  /* Overlay text */
+  .overlay {
+    font-family: karla;
+    font-weight: bolder;
+    font-size: 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    overflow: auto;
+  }
+  
+  .box-1:hover {
+    background-color: lightcyan;
+  }
+  
+  .box-1:hover .overlay {
+    opacity: 1;
+  }
+  
+  /* Second flex container */
+  .flex-container-2 {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    margin: 20px;
+    
+  }
+  
+  /* Flex box items in second container */
+  .box-2{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 50px;
+  }
+  
+  .box-2 > div {
+    flex: 1 0 100%;
+    padding: 10px;
+    box-sizing: border-box;
+
+  }
+  
+  .box-2 .header {
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+    height: 100px;
+  }
+  
+  .box-2 .image-section {
+
+    flex: 1;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .box-2 .image-section img {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 100%;
+    height: 290px;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+  
+  .box-2 .image-section img.active {
+    opacity: 1;
+  }
+  
+  .box-2 .content-section {
+    font-family: karla;
+    background-color: #d53633;
+    flex: 2;
+    font-size: 20px;
+    height: 300px;
+    margin: 20px;
+  }
+ li{
+ list-style-type: none;
+}
+.ct{
+  text-align: center;
+  font-size: 50px;
+  font-family: opf;
+  font-weight: bolder;
+}
+.ctp{
+  text-align: center;
+  font-size: 50px;
+  font-family: opf;
+  font-weight: bolder;
+  color: white;
+}

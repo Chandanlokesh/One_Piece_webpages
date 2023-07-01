@@ -1,0 +1,388 @@
+@font-face {
+    font-family: opf;
+    src: url(/font/one\ piece\ font.ttf);
+}
+@font-face {
+    font-family: karla;
+    src: url(/font/Karla-Italic-VariableFont_wght.ttf);
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: karla;
+    
+}
+body{
+    
+    background: radial-gradient(circle at 0% 0.5%, rgb(241, 241, 242) 0.1%, rgb(224, 226, 228) 100.2%);
+}
+/* this is for navigation */
+
+header{
+    display: flex;
+    width: 100%;
+    background-color: transparent ;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 100px;
+    height: 50px;
+    z-index: 2;
+    margin-top: 10px;
+    
+}
+.logo{
+    font-family: opf;
+    letter-spacing: 1px;
+    color: white;
+    margin-left: -173px;
+    font-weight: bolder;
+    font-size: 40px;
+}
+.navigationbar ul{
+    display: flex;
+    list-style-type: none;
+}
+.navigationbar ul li a{
+    display: block;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: 0.2s;
+    margin:0 5px ;
+    padding: 10px 25px;
+    font-family: karla;
+    font-size: large;
+    font-weight: 900;
+
+}
+.navigationbar ul li a:hover{
+    background-color: black;
+}
+.navigationbar ul li a.active{
+    background-color: black;
+}
+
+/* this is for baground videos */
+
+.video-background {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .video-background video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.329);
+    z-index: -1;
+  }
+
+  .text-container {
+    position: absolute;
+    top: 50%;
+    left: 31%;
+    font-size: 50px;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+    color: white;
+  }
+  
+
+  .animated-text,.fontc {
+    opacity: 0;
+    animation: fade-in 8s forwards;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-duration: 5s;
+  }
+  .fontc{
+    font-family: opf;
+    font-size: 50px;
+  }
+
+/*container*/
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  background-image: url(/images/index/conti.jpeg);
+  background-size: cover;
+  gap: 70px;
+}
+
+.flex-item1 {
+  flex-grow: 1;
+  background-color: #d53633ed;
+  height: 500px;
+  display: flex;
+  align-items: center; /* Adjust alignment to center */
+  overflow: hidden;
+}
+
+.image-container {
+  width: 70%;
+  display: flex;
+  align-items: flex-start; /* Adjust alignment to top */
+}
+
+.image-container img {
+  width: 100%;
+  height: 400px;
+  transform: translateY(-145%); /* Move image offscreen */
+  transition: transform 0.5s ease; /* Add transition */
+}
+
+.button-container1 {
+  width: 30%;
+  display: flex;
+  justify-content: flex-end; /* Adjust alignment to right */
+  align-items: center;
+  overflow: hidden;
+}
+
+.button-container1 button {
+  font-weight: 900;
+  font-size: 30px;
+  padding: 50px 70px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.97);
+  border: none;
+  cursor: pointer;
+  opacity: 0; /* Hide button initially */
+  transform: translateX(100%); /* Move button offscreen */
+  transition: transform 0.5s ease, opacity 0.5s ease; /* Add transitions */
+}
+
+.flex-item1:hover .image-container img {
+  transform: translateY(0%); /* Move image to original position on hover */
+}
+
+.flex-item1:hover .button-container1 button {
+  opacity: 1; /* Show button on hover */
+  transform: translateX(-50%); /* Move button further to the left on hover */
+}
+
+.flex-container2 {
+  display: flex;
+  flex-direction: column;
+  background-image: url(/images/index/conti2.jpeg);
+  background-size: cover;
+  gap: 70px;
+}
+
+.flex-item2 {
+  flex-grow: 1;
+  background-color: #1413138f;
+  height: 500px;
+  display: flex;
+  align-items: center; /* Adjust alignment to center */
+  overflow: hidden;
+}
+
+.image-container {
+  width: 70%;
+  display: flex;
+  align-items: flex-start; /* Adjust alignment to top */
+}
+
+.image-container img {
+  width: 100%;
+  height: 450px;
+  transform: translateY(-145%); /* Move image offscreen */
+  transition: transform 0.5s ease; /* Add transition */
+}
+
+.button-container2 {
+  width: 30%;
+  display: flex;
+  justify-content: flex-end; /* Adjust alignment to right */
+  align-items: center;
+  overflow: hidden;
+}
+
+.button-container2 button {
+  font-weight: 900;
+  font-size: 30px;
+  padding: 50px 70px;
+  color: white;
+  background-color: rgb(204, 32, 32);
+  border: none;
+  cursor: pointer;
+  opacity: 0; /* Hide button initially */
+  transform: translateX(145%); /* Move button offscreen */
+  transition: transform 0.5s ease, opacity 0.5s ease; /* Add transitions */
+}
+
+.flex-item2:hover .image-container img {
+  transform: translateY(0%); /* Move image to original position on hover */
+}
+
+.flex-item2:hover .button-container2 button {
+  opacity: 1; /* Show button on hover */
+  transform: translateX(-50%); /* Move button further to the left on hover */
+}
+
+
+/* flex3 */
+
+.flex-container3 {
+  display: flex;
+  flex-direction: column;
+  background-image: url(/images/index/conti.jpeg);
+  background-size: cover;
+  gap: 0px;
+}
+
+.flex-item3 {
+  flex-grow: 1;
+  background-color: #d4c7c78f;
+  height: 500px;
+  display: flex;
+  align-items: center; /* Adjust alignment to center */
+  overflow: hidden;
+}
+
+.image-container {
+  width: 70%;
+  display: flex;
+  align-items: flex-start; /* Adjust alignment to top */
+}
+
+.image-container img {
+  width: 100%;
+  height: 450px;
+  transform: translateY(-145%); /* Move image offscreen */
+  transition: transform 0.5s ease; /* Add transition */
+}
+
+.button-container3 {
+  width: 30%;
+  display: flex;
+  justify-content: flex-end; /* Adjust alignment to right */
+  align-items: center;
+  overflow: hidden;
+}
+
+.button-container3 button {
+  font-weight: 900;
+  font-size: 30px;
+  padding: 50px 70px;
+  color: white;
+  background-color: rgb(5, 5, 5);
+  border: none;
+  cursor: pointer;
+  opacity: 0; /* Hide button initially */
+  transform: translateX(145%); /* Move button offscreen */
+  transition: transform 0.5s ease, opacity 0.5s ease; /* Add transitions */
+}
+
+.flex-item3:hover .image-container img {
+  transform: translateY(0%); /* Move image to original position on hover */
+}
+
+.flex-item3:hover .button-container3 button {
+  opacity: 1; /* Show button on hover */
+  transform: translateX(-50%); /* Move button further to the left on hover */
+}
+
+/* flex4 */
+.flex-container4 {
+  display: flex;
+  flex-direction: column;
+  background-image: url(/images/index/conti2.jpeg);
+  background-size: cover;
+  gap: 0px;
+}
+
+.flex-item4 {
+  flex-grow: 1;
+  background-color: #d53633ed;
+  height: 500px;
+  display: flex;
+  align-items: center; /* Adjust alignment to center */
+  overflow: hidden;
+}
+
+.image-container {
+  width: 70%;
+  display: flex;
+  align-items: flex-start; /* Adjust alignment to top */
+}
+
+.image-container img {
+  width: 80%;
+  height: 400px;
+  transform: translateY(-145%); /* Move image offscreen */
+  transition: transform 0.5s ease; /* Add transition */
+}
+
+.button-container4 {
+  width: 30%;
+  display: flex;
+  justify-content: flex-end; /* Adjust alignment to right */
+  align-items: center;
+  overflow: hidden;
+}
+
+.button-container4 button {
+  font-weight: 900;
+  font-size: 30px;
+  padding: 50px 70px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.97);
+  border: none;
+  cursor: pointer;
+  opacity: 0; /* Hide button initially */
+  transform: translateX(145%); /* Move button offscreen */
+  transition: transform 0.5s ease, opacity 0.5s ease; /* Add transitions */
+}
+
+.flex-item4:hover .image-container img {
+  transform: translateY(0%); /* Move image to original position on hover */
+}
+
+.flex-item4:hover .button-container4 button {
+  opacity: 1; /* Show button on hover */
+  transform: translateX(-50%); /* Move button further to the left on hover */
+}
+
+
+
+
+
+  
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .footer a img{
+    display: inline-block;
+    margin: 10px;
+    transition: .5s;
+    height: 30px;
+  }
+  .footer a img:hover{
+    height: 35px;
+  }

@@ -1,0 +1,96 @@
+@font-face {
+    font-family: opf;
+    src: url(/font/one\ piece\ font.ttf);
+}
+@font-face {
+    font-family: karla;
+    src: url(/font/Karla-Italic-VariableFont_wght.ttf);
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+    
+    
+}
+body{
+    background: #FFEFBA;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFFFFF, #FFEFBA);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFFFFF, #FFEFBA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+
+/* this is for navigation */
+
+header{
+    display: flex;
+    width: 100%;
+    background-color: #d53633;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 100px;
+    height: 50px;
+    
+}
+.logo{
+    font-family: opf;
+    letter-spacing: 1px;
+    color: white;
+    margin-left: -173px;
+    font-weight: bolder;
+    font-size: 40px;
+}
+.navigationbar ul{
+    display: flex;
+    list-style-type: none;
+}
+.navigationbar ul li a{
+    display: block;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: 0.2s;
+    margin:0 5px ;
+    padding: 10px 25px;
+    font-family: karla;
+    font-size: large;
+    font-weight: 900;
+
+}
+.navigationbar ul li a:hover{
+    background-color: black;
+}
+.navigationbar ul li a.active{
+    background-color: black;
+}
+
+/* This is about section */
+.title{
+    font-family: karla;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    font-weight: 900;
+    font-size: 50px;
+}
+/* image css */
+.mainimg{
+    display: flex;
+    justify-content: center;
+    height: 13cm;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.para1,.para2,.para3,.para4,.para5{
+    margin:50px;
+    font-size: 21px;
+    font-family: kerla;
+}
+span.fontc{
+    font-family: opf;
+    font-weight: 900;
+}

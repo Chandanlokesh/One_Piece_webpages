@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>One Piece</title>
+  <link rel="stylesheet" href="/css/indexs.css">
+  <link rel="icon" href="/images/logo.png" type="image/x-icon">
+
+</head>
+
+<body>
+
+
+
+
+
+
+  <section class="video-background">
+    <header>
+      <div class="logo">ONE PIECE</div>
+      <nav class="navigationbar">
+        <ul>
+          <li><a href="/index.html" class="active">Home</a></li>
+          
+          <li><a href="/html/characters.html">Characters</a></li>
+          <li><a href="/html/products.html">Products</a></li>
+          <li><a href="/html/news.html">News</a></li>
+          <li><a href="/html/about.html">About</a></li>
+        </ul>
+      </nav>
+    </header>
+    <video autoplay muted loop>
+      <source src="/videos/landing bg.mp4" type="video/mp4">
+    </video>
+    <div class="overlay"></div>
+
+    <div class="text-container">
+      <h1 class="animated-text">Let's Explore New World of</h1>
+      <h1 class="animated-text"> One Piece</h1><br>
+
+    </div>
+  </section>
+  <div class="flex-container">
+    <div class="flex-item1">
+      <div class="image-container">
+        <img src="/images/index/chand about.png" alt="Image">
+      </div>
+      <div class="button-container1">
+        <a href="/html/about.html"><button>About</button></a>
+
+      </div>
+    </div>
+    
+  </div>
+  <div class="flex-container2">
+    <div class="flex-item2">
+      <div class="image-container">
+        <img src="/images/index/chand char.png" alt="Image">
+      </div>
+      <div class="button-container2">
+        <a href="/html/characters.html"><button>Characters</button></a>
+      </div>
+    </div>
+    
+  </div>
+  <div class="flex-container3">
+    <div class="flex-item3">
+      <div class="image-container">
+        <img src="/images/index/chand produ.png" alt="Image">
+      </div>
+      <div class="button-container3">
+        <a href="/html/products.html"><button>Products</button></a>
+      </div>
+    </div>
+    <div class="flex-container4">
+      <div class="flex-item4">
+        <div class="image-container">
+          <img src="/images/index/chand news.png" alt="Image">
+        </div>
+        <div class="button-container4">
+          <a href="/html/news.html"><button>News</button></a>
+        </div>
+      </div>
+
+
+
+  <footer style="background-color: black; color: white; padding: 20px;">
+    <div style="text-align: center;" class="footer">
+      <a href="https://www.instagram.com/onepieceofficial/" target="_blank">
+        <img src="/images/footer/Insta.png" alt="Instagram" style="width: 30px; height: 30px; margin-right: 10px;">
+      </a>
+      <a href="https://www.facebook.com/onepieceofficial/" target="_blank">
+        <img src="/images/footer/ffb.png" alt="Facebook" style="width: 30px; height: 30px; margin-right: 10px;">
+      </a>
+      <a href="https://twitter.com/OnePieceAnime" target="_blank">
+        <img src="/images/footer/tw.png" alt="Twitter" style="width: 30px; height: 30px;">
+      </a>
+    </div>
+    <div style="text-align: center; margin-top: 10px;">
+      &copy; 2023 One Piece Site. All rights reserved. | Edited by Chandan.
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const animatedText = document.querySelectorAll(".animated-text");
+
+      for (let i = 0; i < animatedText.length; i++) {
+        animatedText[i].style.animationDelay = i * 0.5 + "s";
+        animatedText[i].style.transform = "translateX(0)"; // Add this line
+      }
+    });
+
+
+  </script>
+
+</body>
+
+</html>

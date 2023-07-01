@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Full-Screen Image Gallery</title>
+  <style>
+    @font-face {
+      font-family: opf;
+      src: url(/font/one\ piece\ font.ttf);
+    }
+
+    @font-face {
+      font-family: karla;
+      src: url(/font/Karla-Italic-VariableFont_wght.ttf);
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      overflow: hidden;
+    }
+
+    .navbar {
+      background-color: #d53633;
+      height: 50px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 0 100px;
+    }
+
+    .logo {
+      font-family: opf;
+      letter-spacing: 1px;
+      color: white;
+      margin-left: -173px;
+      font-weight: bolder;
+      font-size: 40px;
+    }
+
+    .navigationbar ul {
+      display: flex;
+      list-style-type: none;
+    }
+
+    .navigationbar ul li a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      border-radius: 50px;
+      transition: 0.2s;
+      margin: 0 5px;
+      padding: 10px 25px;
+      font-family: karla;
+      font-size: large;
+      font-weight: 900;
+    }
+
+    .navigationbar ul li a:hover {
+      background-color: black;
+    }
+
+    .navigationbar ul li a.active {
+      background-color: black;
+    }
+
+    #image-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: calc(100vh - 100px);
+    }
+
+    #image-container img {
+      max-height: 100%;
+      max-width: 100%;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+    }
+
+    #image-container img.show {
+      opacity: 1;
+    }
+
+    .navigation-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      font-size: 18px;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      z-index: 1;
+    }
+
+    #prev-btn {
+      left: 10px;
+    }
+
+    #next-btn {
+      right: 10px;
+    }
+
+    footer {
+      background-color: black;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+    }
+
+    .footer-icons {
+      margin-bottom: 10px;
+    }
+
+    .footer-icons a {
+      display: inline-block;
+      margin-right: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="navbar">
+    <div class="logo">ONE PIECE</div>
+    <nav class="navigationbar">
+      <ul>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/html/characters.html" class="active">Characters</a></li>
+        <li><a href="/html/products.html">Products</a></li>
+        <li><a href="/html/news.html">News</a></li>
+        <li><a href="/html/about.html">About</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div id="image-container">
+    <img id="gallery-image" src="" alt="Gallery Image">
+    <button id="prev-btn" class="navigation-btn">&lt; Prev</button>
+    <button id="next-btn" class="navigation-btn">Next &gt;</button>
+  </div>
+
+  <footer>
+    <div class="footer-icons">
+      <a href="https://www.instagram.com/onepieceofficial/" target="_blank">
+        <img src="/images/footer/Insta.png" alt="Instagram" style="width: 30px; height: 30px; margin-right: 10px;">
+      </a>
+      <a href="https://www.facebook.com/onepieceofficial/" target="_blank">
+        <img src="/images/footer/ffb.png" alt="Facebook" style="width: 30px; height: 30px; margin-right: 10px;">
+      </a>
+      <a href="https://twitter.com/OnePieceAnime" target="_blank">
+        <img src="/images/footer/tw.png" alt="Twitter" style="width: 30px; height: 30px;">
+      </a>
+    </div>
+    <div class="footer-text">
+      &copy; 2023 One Piece Site. All rights reserved. | Edited by Chandan.
+    </div>
+  </footer>
+
+  <script>
+    const images = [
+      "/images/char/intro.png",
+      "/images/char/luffy.png",
+      "/images/char/zoro.png",
+      "/images/char/sanji.png",
+      "/images/char/ussop.png",
+      "/images/char/nami.png",
+      "/images/char/chopper.png",
+      "/images/char/robin.png",
+      "/images/char/frankey.png",
+      "/images/char/brook.png",
+      "/images/char/jinbe.png"
+    ];
+
+    const galleryImage = document.getElementById("gallery-image");
+    const prevButton = document.getElementById("prev-btn");
+    const nextButton = document.getElementById("next-btn");
+    let currentIndex = 0;
+
+    function showImage(index) {
+      galleryImage.classList.remove("show");
+      setTimeout(() => {
+        galleryImage.src = images[index];
+        galleryImage.classList.add("show");
+      }, 500);
+    }
+
+    function navigateToNext() {
+      currentIndex = (currentIndex + 1) % images.length;
+      showImage(currentIndex);
+    }
+
+    function navigateToPrev() {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      showImage(currentIndex);
+    }
+
+    prevButton.addEventListener("click", navigateToPrev);
+    nextButton.addEventListener("click", navigateToNext);
+
+    // Show the first image initially
+    showImage(currentIndex);
+  </script>
+</body>
+
+</html>
